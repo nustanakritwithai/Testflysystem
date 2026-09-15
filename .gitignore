@@ -1,0 +1,17 @@
+# MaleCNS source/derived datasets
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Local experiment output
+artifacts/
+*.npz
+*.feather
+*.parquet
