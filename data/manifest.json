@@ -1,0 +1,30 @@
+{
+  "project": "Testflysystem",
+  "dataset_family": "MaleCNS",
+  "target_release": "male-cns:v1.0",
+  "files": {
+    "connectivity": {
+      "required": true,
+      "role": "neuron-to-neuron connectivity and synapse-count evidence",
+      "provenance": "MEASURED",
+      "local_pattern": "data/raw/*connectome*weights*.feather"
+    },
+    "annotations": {
+      "required": true,
+      "role": "body/cell annotations",
+      "provenance": "ANNOTATED",
+      "local_pattern": "data/raw/*body*annotations*.feather"
+    },
+    "neurotransmitters": {
+      "required": false,
+      "role": "body-level neurotransmitter predictions",
+      "provenance": "PREDICTED",
+      "local_pattern": "data/raw/*body*neurotransmitters*.feather"
+    }
+  },
+  "policy": {
+    "commit_raw_data": false,
+    "preserve_source_ids": true,
+    "record_checksums_before_experiment": true
+  }
+}
